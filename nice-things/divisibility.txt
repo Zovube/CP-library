@@ -1,0 +1,25 @@
+2 - last digit is divided?
+3 - sum of digits is divided?
+4 - number composed of last two digits is divided?
+5 - last digit is divided?
+6 - is divided by 2 and 3?
+7 - alternating sum of three-digit groups is divided?
+8 - number composed of last three digits is divided?
+9 - sum of digits is divided?
+10 - last digit is divided?
+11 - alternating sum of digits is divided?
+12 - is divided by 3 and 4? 
+
+[NICE]
+
+Pascal's sign : 
+A = a_n|a_n-1|a_n-2|...|a_1|a_0
+
+A mod m = ?
+
+r_0 = 10 mod m
+r_i = 10*r_i-1 mod m
+
+A mod n = sum of r_i*a_i mod n
+
+[/NICE]
