@@ -32,15 +32,15 @@ void solve() {
 		int m = (l + r) / 2;
 		if(aa[m] < x) l = m;
 		else r = m;
-    }
-    cout << r << ' ';
-    l = -1, r = MAXN;
+	}
+    	cout << r << ' ';
+    	l = -1, r = MAXN;
 	while(r - l > 1) {
 		int m = (l + r) / 2;
 		if(aa[m] <= x) l = m;
 		else r = m;
-    }
-    cout << l << ' ';
+    	}
+    	cout << l << ' ';
 }
 
 int main() {
