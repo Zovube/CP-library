@@ -25,17 +25,17 @@ void input() {
 }
 
 void solve() {
-int x;
-cin >> x;
-//find first GREATER then x
-int l = -1, r = MAXN;
-while(r - l > 1) {
-	int m = (l + r) / 2;
-	if(aa[m] < x) l = m;
-	else r = m;
-}
+	int x;
+	cin >> x;
+	//find first GREATER then x
+	int l = -1, r = MAXN;
+	while(r - l > 1) {
+		int m = (l + r) / 2;
+		if(aa[m] < x) l = m;
+		else r = m;
+	}
     cout << r << ' ';
-//find first LESS OR EQUAL to x
+	//find first LESS OR EQUAL to x
     l = -1, r = MAXN;
 	while(r - l > 1) {
 		int m = (l + r) / 2;
