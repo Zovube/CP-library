@@ -31,7 +31,7 @@ void add(int pos, ll val) {
 		pos = (pos | (pos + 1)); //pos + least significant bit of pos
 	}
 }
-
+ 
 // sum on [0, r]
 ll query(int r) {
 	ll ans = 0;
