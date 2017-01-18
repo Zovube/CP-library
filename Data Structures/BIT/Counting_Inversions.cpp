@@ -29,15 +29,15 @@ int ans[MAXN];
 void add(int i) {
 	while(i <= n) {
 		ff[i]++;
-		i = (i | (i + 1));
+		i += (i & -i);
 	}
 }
 
 int f(int r) {
 	int ans = 0;
-	while(r >= 0) {
+	while(r > 0) {
 		ans += ff[r];
-		r = (r & (r + 1)) - 1;
+		r -= (r & -r);
 	}
 	return ans;
 }
@@ -48,7 +48,7 @@ int sum(int l, int r) {
 
 void input() {                  
 	cin >> n;
-	for(int i = 0; i < n; i++) {
+	for(int i = 1; i <= n; i++) {
 		int x;
 		cin >> x;
 		ans[x] = sum(x, n); // add elements one by one
