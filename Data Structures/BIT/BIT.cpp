@@ -28,16 +28,15 @@ ll n, m;
 void add(int pos, ll val) {
 	while(pos < MAXN) {
 		ff[pos] += val;
-		pos = (pos | (pos + 1)); //pos + least significant bit of pos
+		pos += (pos & -pos);
 	}
 }
- 
-// sum on [0, r]
+
 ll query(int r) {
 	ll ans = 0;
-	while(r >= 0) {
+	while(r > 0) {
 		ans += ff[r];
-		r = (r & (r + 1)) - 1; //pos - least significant bit of pos
+		r -= (r & -r);
 	}
 	return ans;
 }
@@ -48,7 +47,7 @@ ll sum(int l, int r) {
 
 void input() {                  
 	cin >> n >> m;
-	for(int i = 0; i < n; i++) {
+	for(int i = 1; i <= n; i++) {
 		ll x;
 		cin >> x;
 		add(i, x);
@@ -59,7 +58,6 @@ void solve() {
 	for(int i = 0; i < m; i++) {
 		int l, r;
 		cin >> l >> r;
-		l--, r--;
 		cout << sum(l, r) << endl;
 	}
 }
