@@ -42,7 +42,7 @@ struct  ttt {
 	int a, b, c;
 	ttt() {};
 };
-
+ 
 ttt answer[MAXN];
 
 pnode root = 0;
