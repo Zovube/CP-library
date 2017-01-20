@@ -65,8 +65,8 @@ pnode insert(pnode * root, int a, int b, int c) {
 	// and root is added left son
 	else {
 		new_right->l = *root;
-        if(*root) (*root)->p = new_right;
-        *root = new_right;
+        	if(*root) (*root)->p = new_right;
+        	*root = new_right;
 	}
 	return new_right;
 }
