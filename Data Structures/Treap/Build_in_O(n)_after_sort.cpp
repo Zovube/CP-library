@@ -50,13 +50,19 @@ pnode lleft = 0;
 
 pnode insert(pnode * root, int a, int b, int c) {
 	pnode new_right = new node(a, b, c);
+	// to keep heap properties we are going up while prior of current node is less than added prior
 	while(lleft != *root && lleft->prior < new_right->prior) lleft = lleft->p;
+	// if find found such node
+	// added left son is current right son
+	// and current right son is added
 	if(lleft && lleft->prior >= b) {
 		new_right->l = lleft->r;
 		if(lleft->r) lleft->r->p = new_right;
 		lleft->r = new_right;
 		new_right->p = lleft;
 	}
+	// else added is root
+	// and root is added left son
 	else {
 		new_right->l = *root;
         if(*root) (*root)->p = new_right;
