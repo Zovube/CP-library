@@ -8,7 +8,6 @@ using namespace std;
 #define pb push_back
 #define fi first
 #define se second
-#define TASK ""
 #define sz(a) (int)(a).size()
 #define all(c) (c).begin(), (c).end()
 #define TIMESTAMP fprintf(stderr, "Execution time: %.3lf s.\n", (double)clock()/CLOCKS_PER_SEC)
